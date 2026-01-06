@@ -146,7 +146,7 @@ async def get_ba_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 async def main():
-    app = ApplicationBuilder().token("TOKEN_KAMU").build()
+    app = ApplicationBuilder().token("8445793972:AAEAtlfKNHy4VC5eYgnXtx0RJbJ8i53rjko").build()
     conv = ConversationHandler(
         entry_points=[CommandHandler("start", start), MessageHandler(filters.Regex('^Input Gamas$'), start_gamas), MessageHandler(filters.Regex('^BA Manual$'), start_ba)],
         states={
@@ -164,4 +164,5 @@ async def main():
     while True: await asyncio.sleep(1)
 
 if __name__ == '__main__':
+
     asyncio.get_event_loop().create_task(main())
